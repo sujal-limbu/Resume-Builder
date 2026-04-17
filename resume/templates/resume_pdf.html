@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Resume PDF</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        h3 {
+            text-align: center;
+            color: gray;
+            font-weight: normal;
+        }
+
+        .section {
+            margin-top: 20px;
+        }
+
+        .title {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        hr {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>{{ resume.first_name }} {{ resume.last_name }}</h1>
+
+    <h3>
+        {{ resume.email }} | {{ resume.phone_number }} | {{ resume.linkedin }}
+    </h3>
+
+    <hr>
+
+    <div class="section">
+        <div class="title">Objective</div>
+        <p>{{ resume.profile }}</p>
+    </div>
+
+    <div class="section">
+        <div class="title">Skills</div>
+        <p>{{ resume.skills }}</p>
+    </div>
+
+    <div class="section">
+        <div class="title">Education</div>
+        <p>{{ resume.education }}</p>
+    </div>
+
+    <div class="section">
+        <div class="title">Project</div>
+        <p>{{ resume.project }}</p>
+    </div>
+
+</body>
+</html>

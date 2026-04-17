@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            margin-bottom: 5px;
+        }
+
+        h3 {
+            color: gray;
+            font-weight: normal;
+        }
+
+        hr {
+            margin: 15px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>{{ resume.first_name }} {{ resume.last_name }}</h1>
+
+        <h3>
+            {{ resume.email }} |
+            {{ resume.phone_number }} |
+            {{ resume.linkedin }}
+        </h3>
+
+        <hr>
+
+        <h4>Objective</h4>
+        <p>{{ resume.profile }}</p>
+
+        <hr>
+
+        <h4>Skills</h4>
+        <p>{{ resume.skills }}</p>
+
+        <hr>
+
+        <h4>Education</h4>
+        <p>{{ resume.education }}</p>
+
+        <hr>
+
+        <h4>Project</h4>
+        <p>{{ resume.profile }}</p>
+
+    </div>
+    <div class="text-center mt-4 mb-5">
+        <a href="{% url 'download_pdf' resume.id %}" class="btn btn-success btn-lg px-4 shadow-sm download-btn">
+            Download PDF
+        </a>
+    </div>
+
+</body>
+
+</html>
